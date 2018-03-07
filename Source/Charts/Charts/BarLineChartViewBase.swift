@@ -432,26 +432,6 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
                 offsetRight += rightAxis.requiredSize().width
             }
 
-            if xAxis.isEnabled && xAxis.isDrawLabelsEnabled
-            {
-                let xlabelheight = xAxis.labelRotatedHeight + xAxis.yOffset
-                
-                // offsets for x-labels
-                if xAxis.labelPosition == .bottom
-                {
-                    offsetBottom += xlabelheight
-                }
-                else if xAxis.labelPosition == .top
-                {
-                    offsetTop += xlabelheight
-                }
-                else if xAxis.labelPosition == .bothSided
-                {
-                    offsetBottom += xlabelheight
-                    offsetTop += xlabelheight
-                }
-            }
-            
             offsetTop += self.extraTopOffset
             offsetRight += self.extraRightOffset
             offsetBottom += self.extraBottomOffset
